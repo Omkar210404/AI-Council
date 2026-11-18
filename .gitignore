@@ -1,0 +1,22 @@
+# Environment variables
+.env
+.env.local
+*.env
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+council.db
+
+# Build artifacts
+dist/
+build/
+.pytest_cache/
