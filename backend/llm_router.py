@@ -45,9 +45,9 @@ class BaseLLMProvider(ABC):
         pass
 
 class GeminiProvider(BaseLLMProvider):
-    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-1.5-flash"):
+    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-3.8-flash"):
         self.api_key = api_key or os.getenv("GEMINI_API_KEY", "")
-        self.model = model or "gemini-1.5-flash"
+        self.model = model or "gemini-3.8-flash"
 
     async def generate_text(self, prompt: str, system_prompt: Optional[str] = None) -> str:
         if not self.api_key:
@@ -303,14 +303,14 @@ def get_llm_provider(provider_name: str, model_name: Optional[str] = None) -> Ba
     if name == "mock":
         return MockLLMProvider()
     elif name == "gemini":
-        return GeminiProvider(model=model_name or "gemini-1.5-flash")
+        return GeminiProvider(model=model_name or "gemini-3.8-flash")
     elif name == "openai":
         return OpenAIProvider(model=model_name or "gpt-4o-mini")
     elif name == "groq":
-        return GroqProvider(model=model_name or "llama-3.3-70b-versatile")
+        return GroqProvider(model=model_name or "qwen/qwen3.8-27b")
     elif name == "anthropic":
         return AnthropicProvider(model=model_name or "claude-3-5-sonnet-20241022")
     elif name == "ollama":
-        return OllamaProvider(model=model_name or "llama3")
+        return OllamaProvider(model=model_name or "llama3.2")
     else:
         raise ValueError(f"Unsupported LLM provider: {provider_name}")

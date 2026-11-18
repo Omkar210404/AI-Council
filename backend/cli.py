@@ -7,6 +7,10 @@ import os
 # Add parent directory to path so backend imports work directly
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# Load .env from the council root
+from dotenv import load_dotenv
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
+
 from backend.llm_router import get_llm_provider
 from backend.agent_runner import load_agents_config, run_single_agent
 from backend.neutraliser import neutralise_question

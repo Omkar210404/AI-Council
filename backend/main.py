@@ -56,17 +56,17 @@ async def get_providers():
             "id": "gemini",
             "name": "Google Gemini",
             "configured": bool(os.getenv("GEMINI_API_KEY")),
-            "default_model": "gemini-1.5-flash",
-            "judge_model": "gemini-1.5-pro",
-            "models": ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-2.0-flash"]
+            "default_model": "gemini-3.8-flash",
+            "judge_model": "gemini-3.8-flash",
+            "models": ["gemini-3.8-flash", "gemini-3.8-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro"]
         },
         {
             "id": "groq",
             "name": "Groq",
             "configured": bool(os.getenv("GROQ_API_KEY")),
-            "default_model": "llama-3.3-70b-versatile",
-            "judge_model": "llama-3.3-70b-versatile",
-            "models": ["llama-3.3-70b-versatile", "mixtral-8x7b-32768"]
+            "default_model": "qwen/qwen3.8-27b",
+            "judge_model": "openai/gpt-oss-120b",
+            "models": ["qwen/qwen3.8-27b", "openai/gpt-oss-20b", "openai/gpt-oss-120b"]
         },
         {
             "id": "openai",
@@ -86,11 +86,11 @@ async def get_providers():
         },
         {
             "id": "ollama",
-            "name": "Ollama (Local)",
+            "name": "Ollama (Local llama3.2)",
             "configured": True,
-            "default_model": "llama3",
-            "judge_model": "llama3",
-            "models": ["llama3", "mistral", "qwen2.5"]
+            "default_model": "llama3.2",
+            "judge_model": "llama3.2",
+            "models": ["llama3.2", "llama3", "mistral", "qwen2.5"]
         },
         {
             "id": "mock",

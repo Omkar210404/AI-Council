@@ -1,0 +1,13 @@
+{
+  "name": "council",
+  "version": "1.0.0",
+  "description": "Multi-agent anti-sycophancy decision engine",
+  "scripts": {
+    "start": "concurrently --names \"API,UI\" --prefix-colors \"cyan,magenta\" \"npm run backend\" \"npm run frontend\"",
+    "backend": ".venv\\Scripts\\uvicorn.exe backend.main:app --reload --port 8000",
+    "frontend": "cd frontend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

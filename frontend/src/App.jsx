@@ -26,9 +26,9 @@ export default function App() {
   
   // Model settings
   const [agentProvider, setAgentProvider] = useState("gemini");
-  const [agentModel, setAgentModel] = useState("gemini-1.5-flash");
+  const [agentModel, setAgentModel] = useState("gemini-3.8-flash");
   const [judgeProvider, setJudgeProvider] = useState("gemini");
-  const [judgeModel, setJudgeModel] = useState("gemini-1.5-pro");
+  const [judgeModel, setJudgeModel] = useState("gemini-3.8-flash");
 
   // State during execution
   const [isRunning, setIsRunning] = useState(false);
