@@ -7,11 +7,13 @@
 
 ## Screenshots & UI Preview
 
-### Main Interface & Multi-Agent Deliberation
-![Council Overview](docs/screenshots/council_ui_overview.jpg)
-
-### Real-Time Isolated Agent Deliberation
+### 1. Real-Time Isolated Agent Deliberation
+Agents evaluate the neutral proposition concurrently in complete isolation with confidence meters and structured arguments:
 ![Council Live Agents](docs/screenshots/council_live_agents.jpg)
+
+### 2. Supreme Judge Verdict & Synthesis
+The Judge weighs arguments by quality, highlights consensus and disagreements, attributes decisive factors, and specifies conditions to flip the verdict:
+![Council Judge Verdict](docs/screenshots/council_judge_verdict.jpg)
 
 ---
 
